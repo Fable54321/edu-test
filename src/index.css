@@ -492,6 +492,18 @@ font-family: "Oswald", "helvetica";
     zoom: 80%;
     width:110%;
   }
+  .description {
+    left: 65%;
+  }
+  .title {
+    position: relative;
+    right: 4%;
+  }
+  .hide {
+    position: relative;
+    margin-top: 3.3%;
+  }
+
 }
 
 @media screen and (min-width: 900px) {
