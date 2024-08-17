@@ -67,7 +67,7 @@ const[badAnswer4, setBadAnswer4] = useState({
 
 const [characterInfo, setCharacterInfo] = useState({
   lives: 3,
-  keys: 4,
+  keys: 0,
 })
 
 

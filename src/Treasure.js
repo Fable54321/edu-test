@@ -26,19 +26,24 @@ const convertToArray = (e) =>{
   
 }
 
+const reload = () => {
+  window.location.reload()
+}
+
   return (
     <>
       <div className="treasureBG">
         <img className="chest" alt ="" src={chest} />
         <div className="winner">
-          <h1>Felicitations vous avez ouvert le tresor</h1>
+          <h1>Félicitations vous avez ouvert le trésor</h1>
           <p>
-            Vous avez su demontrer vos capacites, vous avez maintenant acces au
-            contenu du tresor, une calculatrice qui decompose n'importe quel
+            Vous avez su démontrer vos capacités, vous avez maintenant accès au
+            contenu du trésor, une calculatrice qui décompose n'importe quel
             nombre
           </p>
         </div>
-        
+        <div className='final-div'>
+        <button onClick={reload} className='play-again'>rejouer</button>
         <div className='calculator'>
         <h1> Calculatrice </h1>
             <form onSubmit={(e) => convertToArray(e)}>
@@ -49,13 +54,13 @@ const convertToArray = (e) =>{
             <div className='results'>
              {arrayOfResults.map((result, index)=>(
                 <div className='individual-results'>
-                <p>Methode {index + 1} :</p>
+                <p>Méthode {index + 1} :</p>
                 <p>{result}</p>
                 </div>
              ))}
             </div>
         </div>
-        
+        </div>
       </div>
     </>
   );
