@@ -1,0 +1,48 @@
+.game-over {
+    background-image: url("../images/treasure-background2.jpg");
+    font-size: 4rem;
+    height:100%;
+    width: 100%;
+    background-size:100%;
+    background-position: center;
+    
+}
+
+.play-again {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    margin-left: 2%;
+    position: relative;
+    top: 15%;
+   
+}
+
+.play-again button{
+    width: 150px;
+    height: 44px;
+    border-radius: 15px;
+    font-size: "impact";
+    transition-property: background, color;
+    transition-duration: 2s;
+    background: linear-gradient(to left, #5F8093 50%, #FBBD82 50%) right;
+    background-size: 200% 100%;
+    font-family: "Oswald";
+    box-sizing: border-box;
+    font-size: 2rem;
+    line-height: 6%;
+    color: white;
+}
+
+.play-again button:hover{
+    background-color: #FBBD82;
+    cursor: pointer;
+    background-position: left;
+    background-size: 200%, 100%;
+    color:black;
+
+}
+
+.play-again button:active{
+    background-color: #5F8093;
+}

@@ -1,3 +1,14 @@
+.mobile {
+  display: none;
+}
+
+
+html {
+  height: 100%;
+  overflow: hidden;
+}
+
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -5,9 +16,465 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  height: 100vh;
 }
+
+#root {
+  height: 100vh;
+}
+
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.hearts-and-keys {
+  display: flex;
+  
+  width: 100vw;
+}
+
+.hearts {
+  position:fixed;
+}
+
+
+
+
+
+
+
+/* texts */
+
+.hide {
+  height:0;
+}
+
+#startText {
+  position:relative;
+  top:10px;
+  left:282px;
+  font-size:1.1rem;
+  font-weight: bold;
+}
+
+#startButton{
+  background-color: rgba(0,0,0,0);
+  border-radius: 100%;
+  padding: 0;
+  z-index:1;
+  border:none;
+  position: relative;
+  top: -7px;
+  
+  left: 319px;
+}
+
+#startButton:hover{
+  cursor:pointer;
+}
+
+
+#blackButton {
+  width:80px;
+  height: 80px;
+
+}
+
+
+
+.hints-keys{
+  display: flex;
+  position: relative;
+  top: 700px;
+  flex-direction: column;
+}
+
+.description {
+ 
+ max-width: 25vw;
+  font-size: 2.7em;
+  position:relative;
+  left: 71%;
+  font-family: "Dancing Script";
+  text-align: center;
+  bottom: 1400px;
+border-radius: 10px;
+background-color: rgba(178, 168, 173, 0.5);
+padding-top: none;
+
+}
+
+
+.indice { 
+  font-size: 3rem;
+  position: relative;
+  max-width: 20vw;
+  left: 5%;
+  bottom: 90rem;
+  text-align: center;
+  font-family: "Dancing Script";
+  background-color: rgba(178, 168, 173, 0.5);
+  border-radius: 10px;
+}
+
+.keys{
+  position: relative;
+  left: 5%;
+  bottom: 1400px;
+  background-color: rgba(178, 168, 173, 0.5);
+  max-width: 17vw;
+  padding: 0px 10px 40px 40px;
+  border: rgba(0,0,0,0.7) solid 5px;
+}
+
+.keys p{
+  font-size: 3rem;
+  text-align: left;
+  font-family: "Dancing Script";
+
+}
+
+.keys img {
+  rotate: -270deg;
+  position: relative;
+  left: 10%;
+}
+
+
+/*main content */
+
+
+
+.BG-app {
+  background-image: url("./images/premium_photo-1669274936462-5ac9832ba708.avif"); 
+  width: 100%;
+  height:100%;
+  background-size: cover;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 1%;
+  gap: 20px;
+  position: relative;
+  bottom: 1%;
+  max-width: 1920px;
+  flex-shrink: 1;
+}
+
+.container {
+  display: grid;
+  grid-template-rows:  125px 125px 125px 125px 125px 125px ;
+  grid-template-columns: 16.66% 16.66% 16.66% 16.66% 16.66% 16.66%;
+  border: black solid 1px;
+  background-image: url("./images/deserted\ island.jpeg");
+  background-size: auto;
+  position: relative;
+  left: -2%;
+  max-width: 752px;
+}
+
+.container > div {
+
+  border: rgba(0,0,0,0.2) solid 1px;
+  background-color: rgba(0,0,0,0);
+}
+
+.container img {
+  width: 80%;
+}
+
+.size-6{
+ overflow: hidden;
+}
+
+
+/*TREASURE*/
+.treasureBG {
+ background-image: url("./images/treasure-background.jpg");
+ height: 100%;
+ width: 100%;
+ background-repeat: no-repeat;
+ background-position: center;
+ background-size: 100%;
+ position: absolute;
+
+}
+
+.calculator {
+  position: relative;
+  left: 50vw;
+  width: 500px;
+  bottom: 38vh;
+  border: rgba(0,0,0,0.7) solid 1px;
+  background-color: rgba(178, 168, 173, 0.8);
+  border-radius: 10px;
+  height: 550px;
+  font-family: "helvetica";
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.calculator form {
+  text-align: center;
+  
+}
+.calculator h1 {
+  text-align: center;
+}
+
+.results {
+  margin-top : 6%;
+  font-weight: bold;
+  
+}
+
+.individual-results {
+  border:#e2ca76, dotted, 3px;
+  width: 470px;
+ 
+}
+
+.calculator p {
+  text-align: center;
+  font-style: "helvetica" ;
+  
+  font-size: 1.5rem;
+}
+
+.calculator input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button{
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+
+.chest {
+  width: 400px;
+  height:400px;
+  position: relative;
+  top: 55vh;
+  left: 22vw;
+}
+
+.winner {
+  position: relative;
+  bottom: 40vh;
+  left: 35vw;
+  background-color: rgba(178, 168, 173, 0.5);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 500px;
+  border: rgba(0,0,0,0.7) solid 1px;
+  border-radius: 10px;
+  padding-left: 1%;
+  padding-right: 1%;
+}
+
+
+.winner h1 {
+  width:500px;
+ text-align: center;
+font-family: "helvetica";
+}
+
+.winner p {
+  width: 410px;
+  font-family: "Dancing Script";
+  font-size: 1.6rem;
+  font-weight: bold;
+}
+
+
+
+/*question tiles */
+
+.background-question {
+  background-image: url('./images/beach.avif');
+  background-size: cover;
+  background-size: 100%;
+  width: 100%;
+  height: 100vh;
+}
+
+#ready {
+  position: relative;
+  left: 54%;
+  top: 64%;
+  font-size: 2rem;
+  font-family: "helvetica";
+  border-radius: 10px;
+  padding: 8px;
+  background-color: #e2ca76;
+}
+
+
+#ready:hover {
+  cursor: pointer;
+  background-color: aqua;
+  box-shadow: 10px 10px 5px black;
+}
+
+.questionTilesWrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+}
+
+
+
+.questionTilesWrap p {
+  color:white;
+  background-color: rgba(0,0,0,0.4);
+  font-size: 2rem;
+  font-family: "Oswald";
+  padding:8px;
+  border-radius: 10px;
+}
+
+.questionTilesButtons {
+  display: flex;
+  flex-direction: column;
+  gap: 2vw;
+  margin-top: 5vh;
+  width: 600px;
+}
+
+
+
+.questionTilesButtons button {
+  font-size: 2rem;
+  padding: 8px;
+  font-family: "Oswald";
+  border-radius: 10px;
+  background:linear-gradient(to left, rgba(226, 202, 118, 1) 50%, rgba(72, 180, 165, 0.5) 70%) right ;
+  background-size: 200% 100%;
+  transition-property: background;
+  transition-duration: 2s;
+}
+
+.questionTilesButtons button:hover {
+  cursor: pointer;
+  background-size: 200% 100%;
+  
+  background-position: left;
+}
+
+.letter {
+  color: #FC2310;
+  font-weight: bold;
+  float: left;
+}
+
+.pirateTalk {
+  display: flex;
+}
+
+.pirateTalkText {
+  position: fixed;
+  right: 31%;
+  top: 5%;
+  font-family: "helvetica";
+  width: 20%;
+  text-align: center;
+  font-size: 1.7rem;
+ 
+}
+
+
+
+#bubble {
+  position: fixed;
+  left: 48%;
+}
+#pirate {
+  position: fixed;
+  left: 25%;
+  top: 19%;
+}
+
+
+
+/* buttons */
+
+.buttons {
+  display: flex;
+  gap:5px;
+  width: 602px;
+  justify-content: center;
+  position: relative;
+  left: -2%;
+  
+}
+
+
+
+.buttons img:hover {
+  cursor: pointer;
+}
+
+#left {
+  position: relative;
+  top: 20px;
+  border-radius: 100%;
+  background-color: rgba(0,0,0,0);
+  border: none;
+}
+
+#up {
+  position: relative;
+  left:38px;
+  background-color: rgba(0,0,0,0);
+  border:none;
+  rotate: 90deg;
+  bottom: 25px;
+}
+
+#down {
+  position: relative;
+  top:50px;
+  right:36px;
+  background-color: rgba(0,0,0,0);
+  border:none;
+  rotate: -90deg
+
+}
+
+#right {
+  position: relative;
+  top:15px;
+  background-color: rgba(0,0,0,0);
+  border:none;
+  rotate: 180deg;
+}
+
+@media screen and (width >900px){
+  .mobile{
+    display: none;
+  }
+  .BG-App{
+    display: block;
+  }
+}
+
+@media screen and (width <= 900px){
+  .BG-app{
+    display: none;
+  }
+  .mobile{
+    display: flex;
+    background-image: url('./images/background-mobile.jpg');
+    background-size: cover;
+    height:100vh;
+  }
 }

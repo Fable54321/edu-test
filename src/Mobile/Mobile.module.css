@@ -1,0 +1,34 @@
+.mobile-container {
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    gap: 10%;
+    max-width: 100%;
+    
+}
+
+.title  {
+    max-width: 95%;
+    text-align: center;
+    font-family: 'Dancing Script';
+    font-size: 2rem;
+    overflow-wrap: break-word;
+    position: relative;
+    
+   
+}
+
+.paragraph {
+   max-width: 75%;
+    font-family: 'Oswald', 'helvetica';
+    font-size: 160%;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 1.5%;
+    border-radius: 10px;
+    position: relative;
+    bottom: 7%;
+    
+}
+
