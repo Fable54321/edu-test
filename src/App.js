@@ -331,15 +331,15 @@ if(!questionFlag && characterInfo.keys !== 5 && characterInfo.lives !== 0){
             {characterInfo.lives === 1 && <img src={heart} />}
             {characterInfo.lives === 2 && (
               <>
-                <img src={heart} />
-                <img src={heart} />
+                <img alt ="" src={heart} />
+                <img alt ="" src={heart} />
               </>
             )}
             {characterInfo.lives === 3 && (
               <>
-                <img src={heart} />
-                <img src={heart} />
-                <img src={heart} />
+                <img alt ="" src={heart} />
+                <img alt ="" src={heart} />
+                <img alt ="" src={heart} />
               </>
             )}
           </div>
@@ -350,7 +350,7 @@ if(!questionFlag && characterInfo.keys !== 5 && characterInfo.lives !== 0){
         <div className="hide">
           <p id="startText">Cliquez pour débuter</p>
           <button id="startButton" onClick={handleScroll}>
-            <img id="blackButton" src={source.img} />
+            <img alt ="" id="blackButton" src={source.img} />
           </button>
         </div>
         <div className="wrapper">
@@ -475,16 +475,16 @@ if(!questionFlag && characterInfo.keys !== 5 && characterInfo.lives !== 0){
           </div>
           <div className="buttons">
             <button onClick={moveLeft} id="left">
-              <img src={arrow} />
+              <img alt ="" src={arrow} />
             </button>
             <button onClick={moveUp} id="up">
-              <img src={arrow} />
+              <img alt ="" src={arrow} />
             </button>
             <button onClick={moveDown} id="down">
-              <img src={arrow} />
+              <img alt ="" src={arrow} />
             </button>
             <button onClick={moveRight} id="right">
-              <img src={arrow} />
+              <img alt ="" src={arrow} />
             </button>
           </div>
         </div>
@@ -505,35 +505,35 @@ if(!questionFlag && characterInfo.keys !== 5 && characterInfo.lives !== 0){
           </div>
           <div className="keys">
             <p>Vous possédez {characterInfo.keys} clés :</p>
-            {characterInfo.keys === 1 && <img src={key} />}
+            {characterInfo.keys === 1 && <img alt="" src={key} />}
             {characterInfo.keys === 2 && (
               <>
-                <img src={key} />
-                <img src={key} />
+                <img  alt ="" src={key} />
+                <img alt="" src={key} />
               </>
             )}
             {characterInfo.keys === 3 && (
               <>
-                <img src={key} />
-                <img src={key} />
-                <img src={key} />
+                <img alt ="" src={key} />
+                <img alt ="" src={key} />
+                <img alt ="" src={key} />
               </>
             )}
             {characterInfo.keys === 4 && (
               <>
-                <img src={key} />
-                <img src={key} />
-                <img src={key} />
-                <img src={key} />
+                <img alt ="" src={key} />
+                <img alt ="" src={key} />
+                <img alt ="" src={key} />
+                <img alt ="" src={key} />
               </>
             )}
             {characterInfo.keys === 5 && (
               <>
-                <img src={key} />
-                <img src={key} />
-                <img src={key} />
-                <img src={key} />
-                <img src={key} />
+                <img alt ="" src={key} />
+                <img alt ="" src={key} />
+                <img alt ="" src={key} />
+                <img alt ="" src={key} />
+                <img alt ="" src={key} />
               </>
             )}
           </div>

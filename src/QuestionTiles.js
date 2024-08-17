@@ -1,11 +1,11 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import pirate1 from "./images/pirate-1.png"
 import pirate2 from "./images/pirate-2.png"
 import pirate3 from "./images/pirate-3.png"
 import pirate4 from "./images/pirate-4.png"
 import pirate5 from "./images/pirate-5.png"
 import bubble from "./images/comic bubble.png"
-import { Link, Button, Element, Events, animateScroll as scroll, scrollSpy } from "react-scroll";
+import { animateScroll as scroll } from "react-scroll";
 const QuestionTiles = ({  
     setQuestionFlag, 
     setCharacterInfo, 
@@ -34,7 +34,7 @@ const [oneToFive, setOneToFive] = useState({
 
 const [piratePrompt, setPiratePrompt] = useState(true)
 
-const [allKeyPrompt, setAllkeyPrompt] = useState(false)
+
  
 
 
@@ -152,16 +152,9 @@ const answers = {
     }
 
 
-const neededNumber = OneToThree()
-const neededNumber2 = OneToThree()
-const neededNumber3 = OneToThree()
-const neededNumber4 = OneToThree()
-const neededNumber5 = OneToThree()
 
-/*console.log(oneToFive.A)
-console.log(answers[oneToFive.A])
-console.log(answers[oneToFive.A].option)
-console.log(answers[oneToFive.A].option[neededNumber])*/
+
+
 
 if(!piratePrompt){
   return (
@@ -200,15 +193,15 @@ if(!piratePrompt){
     return (
       <div className="background-question">
         <div className="pirateTalk">
-          {(questionNumber === 1 || questionNumber === 6 || questionNumber === 11 || questionNumber === 16) && (<img id="pirate" src={pirate1} />)}
-          {(questionNumber === 2 || questionNumber === 7 || questionNumber === 12 || questionNumber === 17) && (<img id="pirate" src={pirate2} />)}
-          {(questionNumber === 3 || questionNumber === 8 || questionNumber === 13 || questionNumber === 18) && (<img id="pirate" src={pirate3} />)}
-          {(questionNumber === 4 || questionNumber === 9 || questionNumber === 14 || questionNumber === 19) && (<img id="pirate" src={pirate4} />)}
-          {(questionNumber === 5 || questionNumber === 10 || questionNumber === 15 || questionNumber === 20) && (<img id="pirate" src={pirate5} />)}
+          {(questionNumber === 1 || questionNumber === 6 || questionNumber === 11 || questionNumber === 16) && (<img id="pirate" alt ="" src={pirate1} />)}
+          {(questionNumber === 2 || questionNumber === 7 || questionNumber === 12 || questionNumber === 17) && (<img id="pirate" alt ="" src={pirate2} />)}
+          {(questionNumber === 3 || questionNumber === 8 || questionNumber === 13 || questionNumber === 18) && (<img id="pirate" alt ="" src={pirate3} />)}
+          {(questionNumber === 4 || questionNumber === 9 || questionNumber === 14 || questionNumber === 19) && (<img id="pirate" alt ="" src={pirate4} />)}
+          {(questionNumber === 5 || questionNumber === 10 || questionNumber === 15 || questionNumber === 20) && (<img id="pirate" alt ="" src={pirate5} />)}
 
            
         <div className="pirateTalkText">
-        <img src={bubble} />
+        <img alt ="" src={bubble} />
         <button onClick={readiness} id="ready">
           Je suis prêt
         </button>

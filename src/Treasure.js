@@ -1,14 +1,13 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import chest from "./images/treasure-chest.png"
-import { Link, Button, Element, Events, animateScroll as scroll, scrollSpy } from "react-scroll";
+
 const Treasure = () => {
 const [number, setNumber] = useState(1000)
-const [resultsOn, setResultsOn] = useState(false);
 const [arrayOfResults, setArrayOfResults] = useState([])
 
 
 
-const numbertest = 1000;
+
 
 const convertToArray = (e) =>{
   e.preventDefault()
@@ -30,7 +29,7 @@ const convertToArray = (e) =>{
   return (
     <>
       <div className="treasureBG">
-        <img className="chest" src={chest} />
+        <img className="chest" alt ="" src={chest} />
         <div className="winner">
           <h1>Felicitations vous avez ouvert le tresor</h1>
           <p>
@@ -65,13 +64,3 @@ const convertToArray = (e) =>{
 export default Treasure
 
 
-/*  <div className="treasureBG">
-    </div>
-    <img className="chest" src={chest} />
-    <div className="winner">
-        <h1>Felicitations vous avez ouvert le tresor</h1>
-        <p>Vous avez su demontrer vos capacites,
-        
-          vous avez maintenant acces au contenu du tresor, une calculatrice qui decompose n'importe quel nombre
-        </p>
-    </div> */
