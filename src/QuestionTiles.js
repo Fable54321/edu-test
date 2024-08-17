@@ -51,6 +51,7 @@ const [piratePrompt, setPiratePrompt] = useState(true)
 
 const handleAnswer = (e) => {   
   scroll.scrollTo(197);   
+    // eslint-disable-next-line eqeqeq
     if(e.target.value ==  1){
 
       

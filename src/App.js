@@ -7,7 +7,7 @@ import key from "./Key, an access tool for locks security..png"
 import power1  from "./images/Power on.png"
 import power2 from "./images/power off.png"
 
-import { Link, Button, Element, Events, animateScroll as scroll, scrollSpy } from "react-scroll";
+import {  animateScroll as scroll } from "react-scroll";
 import Treasure from "./Treasure";
 import GameOver from "./GameOver/GameOver";
 import Mobile from "./Mobile/Mobile";
@@ -77,7 +77,7 @@ const [characterInfo, setCharacterInfo] = useState({
  })
 
 //Title display on ou off
- const [titleDisplay, setTitleDisplay] = useState({display: "flex", justifyContent: "center",  fontFamily: "Yellowtail", fontSize: "2rem", width: "100%"})
+ const [titleDisplay] = useState({display: "flex", justifyContent: "center",  fontFamily: "Yellowtail", fontSize: "2rem", width: "100%"})
  
 
  //source image pour bouton
@@ -98,7 +98,7 @@ const [characterInfo, setCharacterInfo] = useState({
  //-----------------------------------------------------
  
  //numero au hasard pour indice
- const [randomNumber, setRandomNumber] = useState(0)
+ const [randomNumber] = useState(0)
 
 //
 
@@ -203,6 +203,7 @@ useEffect(() => {
    })
   
    
+ // eslint-disable-next-line react-hooks/exhaustive-deps
  }, [goodAnswer]) 
 
 
@@ -225,6 +226,7 @@ useEffect(() => {
     setQuestionFlag(true)
    }
    
+ // eslint-disable-next-line react-hooks/exhaustive-deps
  },[tile])
 
 //movement functions
@@ -328,7 +330,7 @@ if(!questionFlag && characterInfo.keys !== 5 && characterInfo.lives !== 0){
       <div className="BG-app">
         <div className="hearts-and-keys">
           <div className="hearts">
-            {characterInfo.lives === 1 && <img src={heart} />}
+            {characterInfo.lives === 1 && <img alt ="" src={heart} />}
             {characterInfo.lives === 2 && (
               <>
                 <img alt ="" src={heart} />
@@ -355,122 +357,122 @@ if(!questionFlag && characterInfo.keys !== 5 && characterInfo.lives !== 0){
         </div>
         <div className="wrapper">
           <div className="container">
-            <div>1{tile.y === 6 && tile.x === 0 && <img src={pirate} />}</div>
-            <div>2{tile.y === 6 && tile.x === 1 && <img src={pirate} />}</div>
-            <div>3{tile.y === 6 && tile.x === 2 && <img src={pirate} />}</div>
-            <div>4{tile.y === 6 && tile.x === 3 && <img src={pirate} />}</div>
-            <div>5{tile.y === 6 && tile.x === 4 && <img src={pirate} />}</div>
-            <div>6{tile.y === 6 && tile.x === 5 && <img src={pirate} />}</div>
-            <div>7{tile.y === 5 && tile.x === 0 && <img src={pirate} />}</div>
-            <div>8{tile.y === 5 && tile.x === 1 && <img src={pirate} />}</div>
-            <div>9{tile.y === 5 && tile.x === 2 && <img src={pirate} />}</div>
+            <div>1{tile.y === 6 && tile.x === 0 && <img alt ="" src={pirate} />}</div>
+            <div>2{tile.y === 6 && tile.x === 1 && <img alt ="" src={pirate} />}</div>
+            <div>3{tile.y === 6 && tile.x === 2 && <img alt ="" src={pirate} />}</div>
+            <div>4{tile.y === 6 && tile.x === 3 && <img alt ="" src={pirate} />}</div>
+            <div>5{tile.y === 6 && tile.x === 4 && <img alt ="" src={pirate} />}</div>
+            <div>6{tile.y === 6 && tile.x === 5 && <img alt ="" src={pirate} />}</div>
+            <div>7{tile.y === 5 && tile.x === 0 && <img alt ="" src={pirate} />}</div>
+            <div>8{tile.y === 5 && tile.x === 1 && <img alt ="" src={pirate} />}</div>
+            <div>9{tile.y === 5 && tile.x === 2 && <img alt ="" src={pirate} />}</div>
             <div>
               10
-              {tile.y === 5 && tile.x === 3 && <img src={pirate} />}
+              {tile.y === 5 && tile.x === 3 && <img alt="" src={pirate} />}
             </div>
             <div>
               11
-              {tile.y === 5 && tile.x === 4 && <img src={pirate} />}
+              {tile.y === 5 && tile.x === 4 && <img alt ="" src={pirate} />}
             </div>
             <div>
               12
-              {tile.y === 5 && tile.x === 5 && <img src={pirate} />}
+              {tile.y === 5 && tile.x === 5 && <img alt ="" src={pirate} />}
             </div>
             <div>
               13
-              {tile.y === 4 && tile.x === 0 && <img src={pirate} />}
+              {tile.y === 4 && tile.x === 0 && <img alt ="" src={pirate} />}
             </div>
             <div>
               14
-              {tile.y === 4 && tile.x === 1 && <img src={pirate} />}
+              {tile.y === 4 && tile.x === 1 && <img alt ="" src={pirate} />}
             </div>
             <div>
               15
-              {tile.y === 4 && tile.x === 2 && <img src={pirate} />}
+              {tile.y === 4 && tile.x === 2 && <img alt ="" src={pirate} />}
             </div>
             <div>
               16
-              {tile.y === 4 && tile.x === 3 && <img src={pirate} />}
+              {tile.y === 4 && tile.x === 3 && <img alt ="" src={pirate} />}
             </div>
             <div>
               17
-              {tile.y === 4 && tile.x === 4 && <img src={pirate} />}
+              {tile.y === 4 && tile.x === 4 && <img alt ="" src={pirate} />}
             </div>
             <div>
               18
-              {tile.y === 4 && tile.x === 5 && <img src={pirate} />}
+              {tile.y === 4 && tile.x === 5 && <img alt ="" src={pirate} />}
             </div>
             <div>
               19
-              {tile.y === 3 && tile.x === 0 && <img src={pirate} />}
+              {tile.y === 3 && tile.x === 0 && <img alt ="" src={pirate} />}
             </div>
             <div>
               20
-              {tile.y === 3 && tile.x === 1 && <img src={pirate} />}
+              {tile.y === 3 && tile.x === 1 && <img alt ="" src={pirate} />}
             </div>
             <div>
               21
-              {tile.y === 3 && tile.x === 2 && <img src={pirate} />}
+              {tile.y === 3 && tile.x === 2 && <img alt ="" src={pirate} />}
             </div>
             <div>
               22
-              {tile.y === 3 && tile.x === 3 && <img src={pirate} />}
+              {tile.y === 3 && tile.x === 3 && <img alt ="" src={pirate} />}
             </div>
             <div>
               23
-              {tile.y === 3 && tile.x === 4 && <img src={pirate} />}
+              {tile.y === 3 && tile.x === 4 && <img alt ="" src={pirate} />}
             </div>
             <div>
               24
-              {tile.y === 3 && tile.x === 5 && <img src={pirate} />}
+              {tile.y === 3 && tile.x === 5 && <img alt ="" src={pirate} />}
             </div>
             <div>
               25
-              {tile.y === 2 && tile.x === 0 && <img src={pirate} />}
+              {tile.y === 2 && tile.x === 0 && <img alt ="" src={pirate} />}
             </div>
             <div>
               26
-              {tile.y === 2 && tile.x === 1 && <img src={pirate} />}
+              {tile.y === 2 && tile.x === 1 && <img alt ="" src={pirate} />}
             </div>
             <div>
               27
-              {tile.y === 2 && tile.x === 2 && <img src={pirate} />}
+              {tile.y === 2 && tile.x === 2 && <img alt ="" src={pirate} />}
             </div>
             <div>
               28
-              {tile.y === 2 && tile.x === 3 && <img src={pirate} />}
+              {tile.y === 2 && tile.x === 3 && <img alt ="" src={pirate} />}
             </div>
             <div>
               29
-              {tile.y === 2 && tile.x === 4 && <img src={pirate} />}
+              {tile.y === 2 && tile.x === 4 && <img alt ="" src={pirate} />}
             </div>
             <div>
               30
-              {tile.y === 2 && tile.x === 5 && <img src={pirate} />}
+              {tile.y === 2 && tile.x === 5 && <img alt ="" src={pirate} />}
             </div>
             <div>
               31
-              {tile.y === 1 && tile.x === 0 && <img src={pirate} />}
+              {tile.y === 1 && tile.x === 0 && <img alt ="" src={pirate} />}
             </div>
             <div>
               32
-              {tile.y === 1 && tile.x === 1 && <img src={pirate} />}
+              {tile.y === 1 && tile.x === 1 && <img alt ="" src={pirate} />}
             </div>
             <div>
               33
-              {tile.y === 1 && tile.x === 2 && <img src={pirate} />}
+              {tile.y === 1 && tile.x === 2 && <img alt ="" src={pirate} />}
             </div>
             <div>
               34
-              {tile.y === 1 && tile.x === 3 && <img src={pirate} />}
+              {tile.y === 1 && tile.x === 3 && <img alt ="" src={pirate} />}
             </div>
             <div>
               35
-              {tile.y === 1 && tile.x === 4 && <img src={pirate} />}
+              {tile.y === 1 && tile.x === 4 && <img alt ="" src={pirate} />}
             </div>
             <div>
               36
-              {tile.y === 1 && tile.x === 5 && <img src={pirate} />}
+              {tile.y === 1 && tile.x === 5 && <img alt ="" src={pirate} />}
             </div>
           </div>
           <div className="buttons">
