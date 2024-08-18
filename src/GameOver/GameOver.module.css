@@ -1,7 +1,7 @@
 .game-over {
     background-image: url("../images/treasure-background2.jpg");
     font-size: 4rem;
-    height:100%;
+    height: 100vh;
     width: 100%;
     background-size:100%;
     background-position: center;
