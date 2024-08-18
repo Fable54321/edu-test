@@ -495,7 +495,7 @@ font-family: "Oswald", "helvetica";
 
 @media screen and (max-width:1800px) {
   .BG-app{
-    zoom: 80%;
+    zoom: 77%;
     width:110%;
   }
   .description {
@@ -504,8 +504,8 @@ font-family: "Oswald", "helvetica";
   .title {
     display: block;
     position: relative;
-    right: 8%;
-    left: 0%;
+    
+    
   }
  
   .hide {
