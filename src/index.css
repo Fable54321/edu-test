@@ -49,14 +49,16 @@ code {
 
 .hide {
   height:0;
+ 
 }
 
 #startText {
   position:relative;
-  top:10px;
-  left:282px;
+  top:160px;
+  left:271px;
   font-size:1.1rem;
   font-weight: bold;
+
 }
 
 #startButton{
@@ -66,7 +68,7 @@ code {
   z-index:1;
   border:none;
   position: relative;
-  top: -7px;
+  top: 160px;
   
   left: 319px;
 }
@@ -379,6 +381,10 @@ font-family: "Oswald", "helvetica";
   width: 600px;
 }
 
+.title {
+  position: relative;
+  right: 1.5%;
+}
 
 
 .questionTilesButtons button {
@@ -496,9 +502,12 @@ font-family: "Oswald", "helvetica";
     left: 65%;
   }
   .title {
+    display: block;
     position: relative;
-    right: 4%;
+    right: 8%;
+    left: 0%;
   }
+ 
   .hide {
     position: relative;
     margin-top: 3.3%;

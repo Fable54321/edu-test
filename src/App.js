@@ -346,9 +346,7 @@ if(!questionFlag && characterInfo.keys !== 5 && characterInfo.lives !== 0){
             )}
           </div>
         </div>
-        <div className="title" style={titleDisplay}>
-          <h1>Le trésor décomposé</h1>
-        </div>
+       
         <div className="hide">
           <p id="startText">Cliquez pour débuter</p>
           <button id="startButton" onClick={handleScroll}>
@@ -356,6 +354,9 @@ if(!questionFlag && characterInfo.keys !== 5 && characterInfo.lives !== 0){
           </button>
         </div>
         <div className="wrapper">
+        <div className="title" style={titleDisplay}>
+          <h1>Le trésor décomposé</h1>
+        </div>
           <div className="container">
             <div>1{tile.y === 6 && tile.x === 0 && <img alt ="" src={pirate} />}</div>
             <div>2{tile.y === 6 && tile.x === 1 && <img alt ="" src={pirate} />}</div>
