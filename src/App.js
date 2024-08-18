@@ -304,7 +304,7 @@ const handleScroll =() => {
       img: power2
     }
   });
-  scroll.scrollTo(190)
+  scroll.scrollTo(195)
  }else {
   setSource((prev) => {
     return {
