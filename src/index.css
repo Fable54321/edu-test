@@ -499,7 +499,7 @@ font-family: "Oswald", "helvetica";
     width:110%;
   }
   .description {
-    left: 65%;
+    left: 62%;
   }
   .title {
     display: block;
@@ -511,6 +511,9 @@ font-family: "Oswald", "helvetica";
   .hide {
     position: relative;
     margin-top: 3.3%;
+  }
+  .questionTilesWrap {
+    zoom: 73%;
   }
 
 }
