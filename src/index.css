@@ -516,7 +516,41 @@ font-family: "Oswald", "helvetica";
     zoom: 73%;
   }
 
+  .treasureBG {
+    height: 150%;
+    zoom: 85%;
+  }
+
+  .winner {
+    margin-top: 10%;
+  }
+
+  .calculator {
+    zoom: 95%;
+    position: relative;
+    left: 65%;
+  }
+
+  .chest {
+    position: relative;
+    top: 50%;
+  }
+
+  .play-again {
+    position: fixed;
+    bottom: 35%;
+    left: 42%;
+    zoom: 115%;
+  }
+ 
+  .calculator form {
+    zoom: 110%;
+  }
+
 }
+
+
+
 
 @media screen and (min-width: 900px) {
   .mobile{
