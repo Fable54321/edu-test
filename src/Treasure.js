@@ -29,15 +29,18 @@ const convertToArray = (e) =>{
 const reload = () => {
   window.location.reload()
 }
+const handleInvalid = (e) => {
+  e.target.setCustomValidity("Tu dois entrer un nombe entre 1000 et 9999 !")
+}
 
   return (
     <>
       <div className="treasureBG">
         <img className="chest" alt ="" src={chest} />
         <div className="winner">
-          <h1>Félicitations vous avez ouvert le trésor</h1>
+          <h1>Félicitations tu as ouvert le trésor</h1>
           <p>
-            Vous avez su démontrer vos capacités, vous avez maintenant accès au
+            Tu as su démontrer vos capacités, vous avez maintenant accès au
             contenu du trésor, une calculatrice qui décompose n'importe quel
             nombre
           </p>
@@ -48,7 +51,7 @@ const reload = () => {
         <h1> Calculatrice </h1>
             <form onSubmit={(e) => convertToArray(e)}>
                 <label htmlFor='numberInput'> Nombre: </label>
-                <input id="numberInput" value={number} onChange={(e)=> setNumber(e.target.value)} type="number" min={1000} max={9999}></input>
+                <input onInvalid={handleInvalid} id="numberInput" value={number} onChange={(e)=> setNumber(e.target.value)} type="number" min={1000} max={9999}></input>
                 <button>entrer</button>
             </form>
             <div className='results'>

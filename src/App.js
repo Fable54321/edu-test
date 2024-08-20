@@ -98,7 +98,7 @@ const [characterInfo, setCharacterInfo] = useState({
  //-----------------------------------------------------
  
  //numero au hasard pour indice
- const [randomNumber] = useState(0)
+ const [randomNumber, setRandomNumber] = useState(0)
 
 //
 
@@ -106,7 +106,9 @@ const [characterInfo, setCharacterInfo] = useState({
 //generation questions
 
 
- 
+ useEffect(()=> {
+  setRandomNumber(Math.round(Math.random)*1)
+ },[])
  
  
 
@@ -234,7 +236,7 @@ useEffect(() => {
 const moveRight = () => {
   
   if(tile.x === 5){
-    alert("L'océan infini se trouve sur votre droite, choisissez une autre direction")
+    alert("L'océan infini se trouve sur ta droite, choisis une autre direction")
   }else {
   setTile((prev) => {
     return {
@@ -249,7 +251,7 @@ const moveRight = () => {
 const moveLeft =() => {
   
   if(tile.x === 0){
-    alert("L'océan infini se trouve sur votre gauche, choisissez une autre direction")
+    alert("L'océan infini se trouve sur ta gauche, choisis une autre direction")
   }
   else {
     setTile((prev) => {
@@ -264,7 +266,7 @@ const moveLeft =() => {
 const moveDown =(e) => {
   
   if(tile.y === 1){
-    alert("L'océan infini se trouve sous vos pieds, choisissez une autre direction")
+    alert("L'océan infini se trouve sous tes pieds, choisis une autre direction")
   }else{
   setTile((prev) => {
     return {
@@ -277,7 +279,7 @@ const moveDown =(e) => {
 
 const moveUp =() => {
   if(tile.y=== 6){
-    alert("L'océan infini se trouve au dessus de vous, choisissez une autre direction")
+    alert("L'océan infini se trouve au dessus de toi, choisis une autre direction")
   }else{
   setTile((prev) => {
     return {
@@ -287,6 +289,26 @@ const moveUp =() => {
   })
 }
 }
+
+useEffect(() => {
+  const handleKeyDown = (event) => {
+    if (event.keyCode === 38 || event.keyCode === 87) {
+      moveUp();
+    }else if(event.keyCode === 39 || event.keyCode === 68){
+      moveRight();
+    }else if(event.keyCode === 40 || event.keyCode === 83){
+      moveDown();
+    }else if(event.keyCode === 37 || event.keyCode === 65){
+      moveLeft()
+    }
+  };
+
+  document.addEventListener("keydown", handleKeyDown);
+
+  return () => {
+    document.removeEventListener("keydown", handleKeyDown);
+  };
+}, [tile]); 
 
 
 //
@@ -315,6 +337,28 @@ const handleScroll =() => {
   scroll.scrollToTop()
  }
 }
+
+const generateLetter = (num) => {
+  switch (num) {
+    case 6:
+      return 'A';
+    case 5:
+      return 'B';
+    case 4:
+      return 'C';
+    case 3:
+      return 'D';
+    case 2:
+      return 'E';
+    default:
+      return 'F';
+  }
+};
+
+console.log(generateLetter(questionTiles.y))
+
+
+
 
 
 
@@ -348,7 +392,7 @@ if(!questionFlag && characterInfo.keys !== 5 && characterInfo.lives !== 0){
         </div>
        
         <div className="hide">
-          <p id="startText">Cliquez pour débuter</p>
+          <p id="startText">Cliques pour débuter</p>
           <button id="startButton" onClick={handleScroll}>
             <img alt ="" id="blackButton" src={source.img} />
           </button>
@@ -358,121 +402,120 @@ if(!questionFlag && characterInfo.keys !== 5 && characterInfo.lives !== 0){
           <h1>Le trésor décomposé</h1>
         </div>
           <div className="container">
-            <div>1{tile.y === 6 && tile.x === 0 && <img alt ="" src={pirate} />}</div>
-            <div>2{tile.y === 6 && tile.x === 1 && <img alt ="" src={pirate} />}</div>
-            <div>3{tile.y === 6 && tile.x === 2 && <img alt ="" src={pirate} />}</div>
-            <div>4{tile.y === 6 && tile.x === 3 && <img alt ="" src={pirate} />}</div>
-            <div>5{tile.y === 6 && tile.x === 4 && <img alt ="" src={pirate} />}</div>
-            <div>6{tile.y === 6 && tile.x === 5 && <img alt ="" src={pirate} />}</div>
-            <div>7{tile.y === 5 && tile.x === 0 && <img alt ="" src={pirate} />}</div>
-            <div>8{tile.y === 5 && tile.x === 1 && <img alt ="" src={pirate} />}</div>
-            <div>9{tile.y === 5 && tile.x === 2 && <img alt ="" src={pirate} />}</div>
+            <div><span className="spanNum">1 -</span> <span className="spanLetter">A</span>{tile.y === 6 && tile.x === 0 && <img alt ="" src={pirate} />}</div>
+            <div><span className="spanLetter">B</span>{tile.y === 6 && tile.x === 1 && <img alt ="" src={pirate} />}</div>
+            <div><span className="spanLetter">C</span>{tile.y === 6 && tile.x === 2 && <img alt ="" src={pirate} />}</div>
+            <div><span className="spanLetter">D</span>{tile.y === 6 && tile.x === 3 && <img alt ="" src={pirate} />}</div>
+            <div><span className="spanLetter">E</span>{tile.y === 6 && tile.x === 4 && <img alt ="" src={pirate} />}</div>
+            <div><span className="spanLetter">F</span>{tile.y === 6 && tile.x === 5 && <img alt ="" src={pirate} />}</div>
+            <div><span className="spanNum">2</span>{tile.y === 5 && tile.x === 0 && <img alt ="" src={pirate} />}</div>
+            <div>{tile.y === 5 && tile.x === 1 && <img alt ="" src={pirate} />}</div>
+            <div>{tile.y === 5 && tile.x === 2 && <img alt ="" src={pirate} />}</div>
             <div>
-              10
+              
               {tile.y === 5 && tile.x === 3 && <img alt="" src={pirate} />}
             </div>
             <div>
-              11
+              
               {tile.y === 5 && tile.x === 4 && <img alt ="" src={pirate} />}
             </div>
             <div>
-              12
+              
               {tile.y === 5 && tile.x === 5 && <img alt ="" src={pirate} />}
             </div>
-            <div>
-              13
+            <div><span className="spanNum">3</span>
               {tile.y === 4 && tile.x === 0 && <img alt ="" src={pirate} />}
             </div>
             <div>
-              14
+              
               {tile.y === 4 && tile.x === 1 && <img alt ="" src={pirate} />}
             </div>
             <div>
-              15
+              
               {tile.y === 4 && tile.x === 2 && <img alt ="" src={pirate} />}
             </div>
             <div>
-              16
+              
               {tile.y === 4 && tile.x === 3 && <img alt ="" src={pirate} />}
             </div>
             <div>
-              17
+              
               {tile.y === 4 && tile.x === 4 && <img alt ="" src={pirate} />}
             </div>
             <div>
-              18
+              
               {tile.y === 4 && tile.x === 5 && <img alt ="" src={pirate} />}
             </div>
             <div>
-              19
+            <span className="spanNum">4</span>
               {tile.y === 3 && tile.x === 0 && <img alt ="" src={pirate} />}
             </div>
             <div>
-              20
+              
               {tile.y === 3 && tile.x === 1 && <img alt ="" src={pirate} />}
             </div>
             <div>
-              21
+              
               {tile.y === 3 && tile.x === 2 && <img alt ="" src={pirate} />}
             </div>
             <div>
-              22
+              
               {tile.y === 3 && tile.x === 3 && <img alt ="" src={pirate} />}
             </div>
             <div>
-              23
+              
               {tile.y === 3 && tile.x === 4 && <img alt ="" src={pirate} />}
             </div>
             <div>
-              24
+              
               {tile.y === 3 && tile.x === 5 && <img alt ="" src={pirate} />}
             </div>
             <div>
-              25
+            <span className="spanNum">5</span>
               {tile.y === 2 && tile.x === 0 && <img alt ="" src={pirate} />}
             </div>
             <div>
-              26
+              
               {tile.y === 2 && tile.x === 1 && <img alt ="" src={pirate} />}
             </div>
             <div>
-              27
+              
               {tile.y === 2 && tile.x === 2 && <img alt ="" src={pirate} />}
             </div>
             <div>
-              28
+              
               {tile.y === 2 && tile.x === 3 && <img alt ="" src={pirate} />}
             </div>
             <div>
-              29
+              
               {tile.y === 2 && tile.x === 4 && <img alt ="" src={pirate} />}
             </div>
             <div>
-              30
+              
               {tile.y === 2 && tile.x === 5 && <img alt ="" src={pirate} />}
             </div>
             <div>
-              31
+            <span className="spanNum">6</span>
               {tile.y === 1 && tile.x === 0 && <img alt ="" src={pirate} />}
             </div>
             <div>
-              32
+              
               {tile.y === 1 && tile.x === 1 && <img alt ="" src={pirate} />}
             </div>
             <div>
-              33
+              
               {tile.y === 1 && tile.x === 2 && <img alt ="" src={pirate} />}
             </div>
             <div>
-              34
+              
               {tile.y === 1 && tile.x === 3 && <img alt ="" src={pirate} />}
             </div>
             <div>
-              35
+              
               {tile.y === 1 && tile.x === 4 && <img alt ="" src={pirate} />}
             </div>
             <div>
-              36
+              
               {tile.y === 1 && tile.x === 5 && <img alt ="" src={pirate} />}
             </div>
           </div>
@@ -497,7 +540,7 @@ if(!questionFlag && characterInfo.keys !== 5 && characterInfo.lives !== 0){
           <div className="indice">
             {randomNumber === 0 ? (
               <p>
-                Le prochain pirate se trouve dans la rangée {questionTiles.y}
+                Le prochain pirate se trouve dans la rangée {generateLetter(questionTiles.y)}
               </p>
             ) : (
               <p>
@@ -507,7 +550,7 @@ if(!questionFlag && characterInfo.keys !== 5 && characterInfo.lives !== 0){
             )}{" "}
           </div>
           <div className="keys">
-            <p>Vous possédez {characterInfo.keys} clés :</p>
+            <p>Tu possèdes {characterInfo.keys} clés </p>
             {characterInfo.keys === 1 && <img alt="" src={key} />}
             {characterInfo.keys === 2 && (
               <>

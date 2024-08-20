@@ -101,7 +101,7 @@ code {
   left: 71%;
   font-family: "Dancing Script";
   text-align: center;
-  bottom: 1400px;
+  bottom: 1350px;
 border-radius: 10px;
 background-color: rgba(178, 168, 173, 0.5);
 padding-top: none;
@@ -185,6 +185,16 @@ padding-top: none;
 
   border: rgba(0,0,0,0.2) solid 1px;
   background-color: rgba(0,0,0,0);
+}
+
+.spanNum {
+  color: yellow;
+  font-size: 1.3rem;
+}
+
+.spanLetter {
+  color: aquamarine;
+  font-size: 1.3rem;
 }
 
 .container img {
@@ -493,7 +503,96 @@ font-family: "Oswald", "helvetica";
   rotate: 180deg;
 }
 
-@media screen and (max-width:1800px) {
+@media screen and (max-width: 1800px) {
+  .BG-app{
+    zoom: 97%;
+    width:110%;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  .description {
+    left: 72%;
+    right: 3%;
+  }
+  .title {
+    display: block;
+    position: relative;
+    
+    
+  }
+ 
+  .hide {
+    position: relative;
+    margin-top: 3.3%;
+  }
+  .questionTilesWrap {
+    zoom: 82%;
+  }
+
+  .treasureBG {
+    display: flex;
+    justify-content: center;
+    zoom: 85%;
+    height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  .winner {
+   position: relative;
+    display: flex;
+    left: -14%;
+    top: 15%;
+    height: fit-content;
+    margin-left: 10%;
+  }
+
+  .winner h1 {
+    font-size: 3rem;
+  }
+
+  .winner p {
+    font-size: 2rem;
+    text-align: center;
+    margin-top: -2%;
+   
+  }
+
+  .calculator  {
+    zoom: 95%;
+    position: relative;
+    left:0;
+    top: 50%;
+    height: 50%;
+  }
+
+  .calculator h1 {
+    font-size: 2rem;
+  }
+
+  .chest {
+    position: fixed;
+    top: 56%;
+    left: 30%;
+    zoom: 110%;
+  }
+
+  .play-again {
+    position: relative;
+    left: 0%;
+    left: -20%;
+    top: 60%;
+    zoom: 200%;
+  }
+ 
+  .calculator form {
+    zoom: 140%;
+  }
+
+
+}
+
+/*@media screen and (max-width:1600px) {
   .BG-app{
     zoom: 73%;
     width:110%;
@@ -517,7 +616,7 @@ font-family: "Oswald", "helvetica";
   }
 
   .treasureBG {
-    height: 150%;
+   background-size: cover;
     zoom: 85%;
   }
 
@@ -547,6 +646,33 @@ font-family: "Oswald", "helvetica";
     zoom: 110%;
   }
 
+}*/
+
+@media screen and (max-width: 1460px) {
+  .BG-app{
+    zoom: 93%;
+    width:117%;
+    
+  }
+
+  .treasureBG {
+    zoom: 70%;
+  }
+}
+
+
+@media screen and (max-width: 1460px) {
+.description {
+  bottom: 1500px;
+}
+
+  
+}
+
+@media screen and (max-width: 1250px) {
+  .treasureBG {
+    zoom: 60%;
+  }
 }
 
 
